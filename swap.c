@@ -21,7 +21,7 @@ int main() {
   printf("\nsecond array\n");
   for(j = 0; j < 10; j++) {
     *(sp + j) = *(fp + (9 - j));
-    printf("%d:%d \n", j, second[j]);
+    printf("%d:%d \n", j, *(sp + j));
   }
   
   return 0;

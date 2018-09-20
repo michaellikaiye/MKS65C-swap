@@ -19,10 +19,26 @@ int main() {
   int *sp = second;
   int j;
   printf("\nsecond array\n");
-  for(j = 0; j < 10; j++) {
-    *(sp + j) = *(fp + (9 - j));
-    printf("%d:%d \n", j, *(sp + j));
-  }
+
+  /* for(j = 0; j < 10; j++) { */
+  /*   *(sp + j) = *(fp + (9 - j)); */
+  /*   printf("%d:%d \n", j, *(sp + j)); */
+  /* } */
   
+  /* sp = sp + 9;  */
+  /* while(*fp) { */
+  /*   *sp = *fp; */
+  /*   fp++; */
+  /*   sp--; */
+  /* } */
+  /* *sp = *fp; */
+  
+  sp = sp + 9;
+  while(*sp-- = *fp++); //bool value of *sp which is made equal to *fp
+  //did the actions even if its no longer true b/c its done before the "body"
+  //will terminate at 0
+  
+  for(j = 0; j < 10; j++)
+    printf("%d:%d \n", j, second[j]);
   return 0;
 }
